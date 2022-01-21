@@ -1,6 +1,6 @@
-import classes from './Card.module.css';
+import classes from './<% .ComponentName %>.module.css';
 
-const Card = ({ children, className }) => {
+const <% .ComponentName %> = ({ children, className }) => {
   return (
     <div className={`${classes.card} ${className}`}>
       {children}
@@ -8,4 +8,4 @@ const Card = ({ children, className }) => {
   )
 };
 
-export default Card;
+export default <% .ComponentName %>;
