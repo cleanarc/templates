@@ -1,7 +1,7 @@
-import styles from './Backdrop.module.css';
+import styles from './<% .ComponentName %>.module.css';
 
-const Backdrop = ({ onClose }) => (
+const <% .ComponentName %> = ({ onClose }) => (
   <div className={styles.backdrop} onClick={onClose} />
 );
 
-export default Backdrop;
+export default <% .ComponentName %>;
