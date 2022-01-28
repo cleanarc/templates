@@ -4,9 +4,9 @@ import Card from './Card';
 import Button from './Button';
 import Backdrop from './Backdrop';
 
-import styles from './ErrorModal.module.css';
+import styles from './<% .ComponentName %>.module.css';
 
-const ModalOverlay = ({ title, message, onClose }) => {
+const <% .ComponentName %>Overlay = ({ title, message, onClose }) => {
   return (
     <Card className={styles.modal}>
       <header className={styles.header}>
@@ -22,7 +22,7 @@ const ModalOverlay = ({ title, message, onClose }) => {
   );
 };
 
-const ErrorModal = ({ title, message, onClose }) => {
+const <% .ComponentName %> = ({ title, message, onClose }) => {
   return (
     <>
       {ReactDOM.createPortal(
@@ -30,11 +30,11 @@ const ErrorModal = ({ title, message, onClose }) => {
         document.getElementById('backdrop-root')
       )}
       {ReactDOM.createPortal(
-        <ModalOverlay title={title} message={message} onClose={onClose} />,
+        <<% .ComponentName %>Overlay title={title} message={message} onClose={onClose} />,
         document.getElementById('overlay-root')
       )}
     </>
   );
 };
 
-export default ErrorModal;
+export default <% .ComponentName %>;
