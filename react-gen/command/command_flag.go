@@ -12,8 +12,8 @@ const (
 )
 
 // Type denotes the type of each cli option
-func (b <% .ComponentNameLower %>Flag) Type() flags.FlagType {
-	switch b {
+func (<% .ReceiverName %> <% .ComponentNameLower %>Flag) Type() flags.FlagType {
+	switch <% .ReceiverName %> {
 	case ComponentName:
 		return flags.String
 	default:
@@ -22,8 +22,8 @@ func (b <% .ComponentNameLower %>Flag) Type() flags.FlagType {
 }
 
 // Name returns the full name of a given flag as it should be used in the cli
-func (b <% .ComponentNameLower %>Flag) Name() string {
-	switch b {
+func (<% .ReceiverName %> <% .ComponentNameLower %>Flag) Name() string {
+	switch <% .ReceiverName %> {
 	case ComponentName:
 		return "name"
 	default:
@@ -32,8 +32,8 @@ func (b <% .ComponentNameLower %>Flag) Name() string {
 }
 
 // Aliases returns any aliases defined for a given flag
-func (b <% .ComponentNameLower %>Flag) Aliases() []string {
-	switch b {
+func (<% .ReceiverName %> <% .ComponentNameLower %>Flag) Aliases() []string {
+	switch <% .ReceiverName %> {
 	case ComponentName:
 		return []string{"n"}
 	default:
@@ -42,8 +42,8 @@ func (b <% .ComponentNameLower %>Flag) Aliases() []string {
 }
 
 // Usage returns the usage message for each flag
-func (b <% .ComponentNameLower %>Flag) Usage() string {
-	switch b {
+func (<% .ReceiverName %> <% .ComponentNameLower %>Flag) Usage() string {
+	switch <% .ReceiverName %> {
 	case ComponentName:
 		return "A custom name for your <% .ComponentNameLower %> component"
 	default:
@@ -52,8 +52,8 @@ func (b <% .ComponentNameLower %>Flag) Usage() string {
 }
 
 // Required returns a bool denoting if a given flag is required
-func (b <% .ComponentNameLower %>Flag) Required() bool {
-	switch b {
+func (<% .ReceiverName %> <% .ComponentNameLower %>Flag) Required() bool {
+	switch <% .ReceiverName %> {
 	case ComponentName:
 		return false
 	default:
@@ -63,8 +63,8 @@ func (b <% .ComponentNameLower %>Flag) Required() bool {
 
 // DefaultValue returns the value assigned to each flag, if none is specified
 // by the user
-func (b <% .ComponentNameLower %>Flag) DefaultValue() interface{} {
-	switch b {
+func (<% .ReceiverName %> <% .ComponentNameLower %>Flag) DefaultValue() interface{} {
+	switch <% .ReceiverName %> {
 	case ComponentName:
 		return "<% .ComponentNameUpper %>"
 	default:
