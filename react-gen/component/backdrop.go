@@ -7,33 +7,33 @@ type <% .ComponentNameUpper %> struct {
 
 // New<% .ComponentNameUpper %> creates a new <% .ComponentNameUpper %> value with the given options
 func New<% .ComponentNameUpper %>(opts ...Option) <% .ComponentNameUpper %> {
-	b := <% .ComponentNameUpper %>{}
+	<% .ReceiverName %> := <% .ComponentNameUpper %>{}
 
 	for _, wrap := range opts {
-		wrap(&b.Options)
+		wrap(&<% .ReceiverName %>.Options)
 	}
 
-	return b
+	return <% .ReceiverName %>
 }
 
 // Name the name of the React component type
-func (b <% .ComponentNameUpper %>) Name() string {
+func (<% .ReceiverName %> <% .ComponentNameUpper %>) Name() string {
 	return "<% .ComponentNameUpper %>"
 }
 
 // Deps list of lower level components which the <% .ComponentNameUpper %> component uses
-func (b <% .ComponentNameUpper %>) Deps() []Component {
+func (<% .ReceiverName %> <% .ComponentNameUpper %>) Deps() []Component {
 	// <% .ComponentNameUpper %> is a vanilla component and does not have any dependencies
 	return nil
 }
 
 // Opts returns the options stored within this component
-func (b <% .ComponentNameUpper %>) Opts() Options {
-	return b.Options
+func (<% .ReceiverName %> <% .ComponentNameUpper %>) Opts() Options {
+	return <% .ReceiverName %>.Options
 }
 
 // AdditionalFiles any files other than the main jsx/js/css files for the
 // component that you want to include from the component's template dir.
-func (b <% .ComponentNameUpper %>) AdditionalFiles() []string {
+func (<% .ReceiverName %> <% .ComponentNameUpper %>) AdditionalFiles() []string {
 	return nil
 }

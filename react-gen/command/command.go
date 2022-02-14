@@ -27,34 +27,34 @@ var (
 type <% .ComponentNameUpper %> struct{}
 
 // Name the name of the command
-func (b <% .ComponentNameUpper %>) Name() string {
+func (<% .ReceiverName %> <% .ComponentNameUpper %>) Name() string {
 	return "<% .ComponentNameLower %>"
 }
 
 // Usage short description of the command
-func (b <% .ComponentNameUpper %>) Usage() string {
+func (<% .ReceiverName %> <% .ComponentNameUpper %>) Usage() string {
 	return "Generates a <% .ComponentNameUpper %> component"
 }
 
 // UsageText format to use when using the command
-func (b <% .ComponentNameUpper %>) UsageText() string {
+func (<% .ReceiverName %> <% .ComponentNameUpper %>) UsageText() string {
 	return "react-gen <% .ComponentNameLower %> [command options] <output-directory>"
 }
 
 // Flags the options for the command
-func (b <% .ComponentNameUpper %>) Flags() []flags.Flag {
+func (<% .ReceiverName %> <% .ComponentNameUpper %>) Flags() []flags.Flag {
 	return []flags.Flag{
 		ComponentName,
 	}
 }
 
 // Action the action to invoke for the <% .ComponentNameLower %> command
-func (b <% .ComponentNameUpper %>) Action() func(ctx context.Context) error {
-	return b.action
+func (<% .ReceiverName %> <% .ComponentNameUpper %>) Action() func(ctx context.Context) error {
+	return <% .ReceiverName %>.action
 }
 
 // action implementation of Action
-func (b <% .ComponentNameUpper %>) action(ctx context.Context) error {
+func (<% .ReceiverName %> <% .ComponentNameUpper %>) action(ctx context.Context) error {
 	componentName := flags.GetStringValue(ctx, ComponentName)
 
 	var outputDir string
