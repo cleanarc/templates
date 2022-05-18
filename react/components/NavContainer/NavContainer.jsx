@@ -1,12 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
 
-import Header from '../Header';
+import NavHeader from '../NavHeader';
 import Background from '../Background';
 
 const <% .ComponentName %> = ({ routes }) => {
   return (
     <>
-      <Header navRoutes={routes} />
+      <NavHeader navRoutes={routes} />
       <main>
         <Background>
           <Routes>
