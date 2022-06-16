@@ -12,7 +12,7 @@ const <% .ComponentName %> = ({ navRoutes }) => {
   return (
     <>
       <header className={classes.header}>
-        <h3>WCBR</h3>
+        <h3>ReactGen</h3>
         <nav
           style={{
             width: '30rem',
