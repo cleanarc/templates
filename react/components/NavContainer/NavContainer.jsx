@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 
-import NavHeader from './NavHeader';
-import Background from './Background';
+import NavHeader from '<% .DepsRelativePath %>/NavHeader';
+import Background from '<% .DepsRelativePath %>/Background';
 
 const <% .ComponentName %> = ({ routes }) => {
   return (

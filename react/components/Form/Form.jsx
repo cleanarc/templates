@@ -1,5 +1,5 @@
-import Button from './Button';
-import Card from './Card';
+import Button from '<% .DepsRelativePath %>/Button';
+import Card from '<% .DepsRelativePath %>/Card';
 
 import classes from './<% .ComponentName %>.module.css';
 

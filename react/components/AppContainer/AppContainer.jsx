@@ -1,5 +1,5 @@
-import Card from './Card';
-import NavContainer from './NavContainer';
+import Card from '<% .DepsRelativePath %>/Card';
+import NavContainer from '<% .DepsRelativePath %>/NavContainer';
 
 const appRoutes = [
   { name: 'Home', path: '/', element: <Card>Welcome Home!</Card> },
