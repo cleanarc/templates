@@ -1,8 +1,8 @@
 import ReactDOM from 'react-dom';
 
-import Card from './Card';
-import Button from './Button';
-import Backdrop from './Backdrop';
+import Card from '<% .DepsRelativePath %>/Card';
+import Button from '<% .DepsRelativePath %>/Button';
+import Backdrop from '<% .DepsRelativePath %>/Backdrop';
 
 import styles from './<% .ComponentName %>.module.css';
 

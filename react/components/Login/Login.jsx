@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useReducer, useContext } from 'react';
 
-import Card from './Card';
-import Button from './Button';
+import Card from '<% .DepsRelativePath %>/Card';
+import Button from '<% .DepsRelativePath %>/Button';
 
-import AuthContext from './AuthContext';
+import AuthContext from '<% .DepsRelativePath %>/AuthContext';
 
 import classes from './<% .ComponentName %>.module.css';
 
